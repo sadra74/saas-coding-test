@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# task1 (react, redux, api)
+- implement a list view with news from the hackernews api
+- implement as much as you think is needed to show us your experience
+- also implement a pagination with for example 10 items per page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# task2 (extend functionality, refactoring)
+we have an online shop with products. the structure of an item is:
+```
+{
+  type: string, // TICKETS or NORMAL
+  sellIn: number, // e.g. days
+  quality: number, // arbitrary number e.g. 50
+  isSecondHand: boolean, // only NORMAL items
+}
+```
+the items need to be updated each day, depending on the item type:
+- the quality of items decrease by 1 each day
+- if the sellIn is 0, item quality decrease twice as fast
+- quality is never below 0
+- quality of items of type 'TICKETS' increase by 1
+    - if sellIn is below 10, the quality increases twice as fast (by 2)
+    - if sellIn turns to 0, the quality drops to 0 as well
+- the sellIn decreases by 1 each day, never below 0
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+task:
+- we have new type of products which can be second hand items (property name is isSecondHand). their quality decrease twice as much even if the sellIn is greater than 0
+- please impl this new functionality but be careful not to break existing code
+- you are even allowed to refactor or drop the whole existing code
+- to work on this, go to App.js and comment in the Task2 import
