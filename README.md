@@ -1,5 +1,5 @@
 # task1 (react, redux, api)
-- implement a list view with news from the hackernews api
+- implement a list view with news from the hackernews api (more info in the actions.js)
 - implement as much as you think is needed to show us your experience
 - also implement a pagination with for example 10 items per page
 
