@@ -27,3 +27,5 @@ task:
 - please implement this new functionality but be careful not to break existing code
 - you are even allowed to refactor or drop the whole existing code
 - to work on this, go to ``App.js`` and comment in the ``Task2`` import
+
+**Please submit your solution as a GitHub repo where we can see the commit history**
