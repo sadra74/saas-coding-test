@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 export function updateQuality(products) {
   for (let i = 0; i < products.length; i++) {
-    if (products[i].type == "TICKETS" && products[i].sellIn > 10) {
+    if (products[i].type == "TICKETS" && products[i].sellIn >= 10) {
       products[i].quality = products[i].quality + 1;
       products[i].sellIn = products[i].sellIn - 1;
     } else {
