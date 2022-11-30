@@ -17,7 +17,7 @@ function NewsList({data}) {
     }, [data, dispatch])
 
     const extractData = useCallback(() => {
-        return !data ? topStoryIds : data;
+        return data ?? topStoryIds;
     }, [data, topStoryIds])
 
     return <div>
