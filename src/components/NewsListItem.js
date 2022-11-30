@@ -5,15 +5,23 @@ import NewsList from "./NewsList";
 
 export function NewsListItem({id}) {
     const dispatch = useDispatch()
+    const [loading, setLoading]=useState(false);
+    const [error, setError]=useState(false);
     const item = useSelector(state => {
         return state.topStories.find(story => story.id === id);
     })
     const [open, setOpen] = useState(false)
     useEffect(() => {
-        dispatch(fetchStoryById(id));
+        setLoading(true)
+        dispatch(fetchStoryById(id)).then(res => {
+            setLoading(false)
+        }).catch(res => {
+            setLoading(false)
+            setError(true)
+        });
     }, [dispatch, id])
     return <div>
-        <div className="item" onClick={() => setOpen(!open)}>{item?.title ? item?.title : item?.id}</div>
+        {!loading ? (!error ? <div className="item" onClick={() => setOpen(!open)}>{item?.title ? item?.title : item?.id}</div> : "An error occurred") : "..."}
         {open && <NewsList data={item?.kids}></NewsList>}
     </div>
 }
