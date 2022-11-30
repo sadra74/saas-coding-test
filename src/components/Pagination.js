@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/Pagination.css'
 
-export function PaginationComponent({numberOfPages, currentPageNumber, setCurrentPageCallBack}) {
+export function Pagination({numberOfPages, currentPageNumber, setCurrentPageCallBack}) {
     const pageNumbers = [...Array(numberOfPages + 1).keys()].slice(1)
     const nextPage = () => {
         if (currentPageNumber !== numberOfPages) setCurrentPageCallBack(currentPageNumber + 1)

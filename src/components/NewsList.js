@@ -2,7 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {loadTopStories} from "../state/actions";
 import {NewsListItem} from "./NewsListItem";
-import {PaginationComponent} from "./PaginationComponent";
+import {Pagination} from "./Pagination";
 import '../css/NewsList.css'
 
 function NewsList({ids}) {
@@ -29,7 +29,7 @@ function NewsList({ids}) {
                 </li>
             ))}
         </ul>
-        <PaginationComponent currentPageNumber={page} numberOfPages={Math.floor(getIds()?.length / 10) + 1} setCurrentPageCallBack={setPage}></PaginationComponent>
+        <Pagination currentPageNumber={page} numberOfPages={Math.floor(getIds()?.length / 10) + 1} setCurrentPageCallBack={setPage}></Pagination>
     </div>;
 }
 
