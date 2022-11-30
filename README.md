@@ -1,3 +1,6 @@
+# Result
+![img.png](img.png)
+
 # task1 (react, redux, api)
 - implement a list view with news from the Hacker News API (more info in the ``actions.js``)
 - implement as much as you think is needed to show us your experience
