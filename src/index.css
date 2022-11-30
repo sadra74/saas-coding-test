@@ -22,5 +22,10 @@ code {
   color: green;
 }
 
-.container {
+.container > li {
+  padding: 2px;
+}
+
+.item {
+  cursor: pointer;
 }

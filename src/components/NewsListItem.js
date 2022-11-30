@@ -13,7 +13,7 @@ export function NewsListItem({id}) {
         dispatch(fetchStoryById(id));
     }, [dispatch, id])
     return <div>
-        <div onClick={() => setOpen(!open)}>{item?.title ? item?.title : item?.id}</div>
+        <div className="item" onClick={() => setOpen(!open)}>{item?.title ? item?.title : item?.id}</div>
         {open && <NewsList data={item?.kids}></NewsList>}
     </div>
 }
