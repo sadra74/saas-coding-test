@@ -1,4 +1,5 @@
 import React from "react";
+import '../css/Icon.css'
 
 export function Icon({kids, open}) {
     return (<>

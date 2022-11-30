@@ -11,39 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/**
-To create less files, I have added css here
- */
-.pagination > li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.active > a{
-  color: green;
-}
-
-.container {
-  list-style: none;
-}
-
-.item {
-  border: 1px dashed gray;
-  padding: 2px;
-  margin: 5px;
-}
-
-.item:hover {
-  background-color: black;
-  color: white;
-}
-
-.item-container {
-  cursor: pointer;
-  display: flex;
-}
-
-.item-container > span {
-  align-self: center;
-}

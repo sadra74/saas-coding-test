@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {loadTopStories} from "../state/actions";
 import {NewsListItem} from "./NewsListItem";
 import {PaginationComponent} from "./PaginationComponent";
+import '../css/NewsList.css'
 
 function NewsList({ids}) {
     const dispatch = useDispatch()

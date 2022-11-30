@@ -4,6 +4,7 @@ import {fetchStoryById} from "../state/actions";
 import NewsList from "./NewsList";
 import * as PropTypes from "prop-types";
 import {Icon} from "./Icon";
+import '../css/NewsListItem.css'
 
 Icon.propTypes = {
     item: PropTypes.any,

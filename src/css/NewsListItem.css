@@ -1,0 +1,16 @@
+.item {
+    border: 1px dashed gray;
+    padding: 2px;
+    margin: 5px;
+}
+
+.item:hover {
+    background-color: black;
+    color: white;
+}
+
+.item-container {
+    cursor: pointer;
+    display: flex;
+}
+
