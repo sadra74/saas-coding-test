@@ -2,14 +2,8 @@ import {useDispatch, useSelector} from "react-redux";
 import React, {useCallback, useEffect, useState} from "react";
 import {fetchStoryById} from "../state/actions";
 import NewsList from "./NewsList";
-import * as PropTypes from "prop-types";
 import {Icon} from "./Icon";
 import '../css/NewsListItem.css'
-
-Icon.propTypes = {
-    item: PropTypes.any,
-    open: PropTypes.bool
-};
 
 export function NewsListItem({id}) {
     const dispatch = useDispatch()
