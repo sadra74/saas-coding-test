@@ -44,7 +44,11 @@ export function updateQuality(products) {
             products[i].sellIn > 0 &&
             products[i].quality > 0
           ) {
-            products[i].quality = products[i].quality - 1;
+              if(products[i].isSecondHand) {
+                  products[i].quality = products[i].quality - 2;
+              } else {
+                  products[i].quality = products[i].quality - 1;
+              }
             products[i].sellIn = products[i].sellIn - 1;
           }
         }
