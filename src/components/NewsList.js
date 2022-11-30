@@ -4,31 +4,31 @@ import {loadTopStories} from "../state/actions";
 import {NewsListItem} from "./NewsListItem";
 import {PaginationComponent} from "./PaginationComponent";
 
-function NewsList({data}) {
+function NewsList({ids}) {
     const dispatch = useDispatch()
-    const topStoryIds = useSelector(state => {
+    const fetchedIds = useSelector(state => {
         return state.topStoryIds;
     })
     const [page, setPage] = useState(1)
     useEffect(() => {
-        if(!data){
+        if(!ids){
             dispatch(loadTopStories())
         }
-    }, [data, dispatch])
+    }, [ids, dispatch])
 
-    const extractData = useCallback(() => {
-        return data ?? topStoryIds;
-    }, [data, topStoryIds])
+    const getIds = useCallback(() => {
+        return ids ?? fetchedIds;
+    }, [ids, fetchedIds])
 
     return <div>
         <ul className="container">
-            {extractData().slice((page - 1) * 10, page * 10).map(id => (
+            {getIds().slice((page - 1) * 10, page * 10).map(id => (
                 <li key={id}>
                     <NewsListItem id={id}></NewsListItem>
                 </li>
             ))}
         </ul>
-        <PaginationComponent currentPageNumber={page} numberOfPages={Math.floor(extractData()?.length / 10) + 1} setCurrentPageCallBack={setPage}></PaginationComponent>
+        <PaginationComponent currentPageNumber={page} numberOfPages={Math.floor(getIds()?.length / 10) + 1} setCurrentPageCallBack={setPage}></PaginationComponent>
     </div>;
 }
 

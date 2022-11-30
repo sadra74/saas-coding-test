@@ -37,6 +37,6 @@ export function NewsListItem({id}) {
             <Icon kids={getKids()} open={open}/>
             <div className="item">{item?.title ?? item?.id}</div>
         </div>) : "An error occurred") : "..."}
-        {open && <NewsList data={getKids() ?? []}></NewsList>}
+        {open && <NewsList ids={getKids() ?? []}></NewsList>}
     </div>
 }
