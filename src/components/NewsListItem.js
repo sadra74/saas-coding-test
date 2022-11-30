@@ -12,8 +12,8 @@ export function NewsListItem({id}) {
     useEffect(() => {
         dispatch(fetchStoryById(id));
     }, [dispatch, id])
-    return <div onClick={() => setOpen(!open)}>
-        {item?.title ? item?.title : item?.id}
+    return <div>
+        <div onClick={() => setOpen(!open)}>{item?.title ? item?.title : item?.id}</div>
         {open && <NewsList data={item?.kids}></NewsList>}
     </div>
 }
