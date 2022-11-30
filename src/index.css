@@ -12,7 +12,9 @@ code {
     monospace;
 }
 
-
+/**
+To create less files, I have added css here
+ */
 .pagination > li {
   display: inline-block;
   margin-right: 10px;
