@@ -3,6 +3,10 @@
     margin-right: 10px;
 }
 
+.pagination {
+    margin-bottom: 10px;
+}
+
 a:link {
     text-decoration: none;
 }
