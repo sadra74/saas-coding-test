@@ -3,6 +3,18 @@
     margin-right: 10px;
 }
 
-.active > a{
-    color: green;
+a:link {
+    text-decoration: none;
+}
+
+.active > a {
+    color: white;
+    background-color: green;
+}
+
+a {
+    border: 1px solid black;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
 }
