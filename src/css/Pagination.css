@@ -18,3 +18,13 @@ a {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.previous {
+    background-color: #5d0000;
+    color: white;
+}
+
+.next {
+    background-color: #055000;
+    color: white;
+}

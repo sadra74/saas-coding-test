@@ -13,7 +13,7 @@ export function Pagination({numberOfPages, currentPageNumber, setCurrentPageCall
         <nav>
             <ul className="pagination">
                 <li>
-                    <a
+                    <a className="previous"
                         onClick={prevPage}
                         href='#'>
                         Previous
@@ -32,6 +32,7 @@ export function Pagination({numberOfPages, currentPageNumber, setCurrentPageCall
                 ))}
                 <li>
                     <a
+                        className="next"
                         onClick={nextPage}
                         href='#'>
                         Next
