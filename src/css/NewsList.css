@@ -2,3 +2,10 @@
     list-style: none;
     margin-bottom: 16px;
 }
+
+.list-view {
+    border: 2px solid lightgray;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px;
+}
