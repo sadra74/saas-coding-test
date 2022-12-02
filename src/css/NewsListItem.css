@@ -1,8 +1,10 @@
 .item {
     flex: auto;
     border: 1px dashed gray;
-    padding: 2px;
     margin: 5px;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 15px;
 }
 
 .item:hover {
