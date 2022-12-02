@@ -30,7 +30,11 @@ export function NewsListItem({id}) {
         {!loading ? (!error ? (<div onClick={() => getKids() ? setOpen(!open) : null}
                                     className="item-container">
             <Icon kids={getKids()} open={open}/>
-            <div className="item">{item?.title ?? (item?.text ? (item?.text?.substring(0,50) + "...") : item?.id)}</div>
+            <a href={item?.url} className="item">
+                <p className="id">{item?.id}</p>
+                <h4 className="title">{item?.title}</h4>
+                <p className="text">{item?.text?.substring(0,50) + "..."}</p>
+            </a>
         </div>) : "An error occurred") : "..."}
         {open && <NewsList ids={getKids() ?? []}></NewsList>}
     </>
