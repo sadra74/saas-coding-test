@@ -4,12 +4,12 @@ import {loadTopStories} from "../state/actions";
 import {NewsListItem} from "./NewsListItem";
 import {Pagination} from "./Pagination";
 import '../css/NewsList.css'
+import {selectTopStoryIds} from "../state/selectors";
 
 function NewsList({ids}) {
     const dispatch = useDispatch()
-    const fetchedIds = useSelector(state => {
-        return state.topStoryIds;
-    })
+
+    const fetchedIds = useSelector(state => selectTopStoryIds(state))
     const [page, setPage] = useState(1)
     useEffect(() => {
         if(!ids){

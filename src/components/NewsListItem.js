@@ -4,14 +4,13 @@ import {fetchStoryById} from "../state/actions";
 import NewsList from "./NewsList";
 import {Icon} from "./Icon";
 import '../css/NewsListItem.css'
+import {selectStoryById} from "../state/selectors";
 
 export function NewsListItem({id}) {
     const dispatch = useDispatch()
     const [loading, setLoading]=useState(true);
     const [error, setError]=useState(false);
-    const item = useSelector(state => {
-        return state.topStories.find(story => story.id === id);
-    })
+    const item = useSelector(state => selectStoryById(state, id))
     const [open, setOpen] = useState(false)
     useEffect(() => {
         dispatch(fetchStoryById(id)).then(_ => {
