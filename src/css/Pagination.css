@@ -34,3 +34,9 @@ a {
     background-color: #055000;
     color: white;
 }
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
