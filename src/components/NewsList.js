@@ -21,7 +21,7 @@ function NewsList({ids}) {
         return ids ?? fetchedIds;
     }, [ids, fetchedIds])
 
-    return <div>
+    return <>
         <ul className="container">
             {getIds().slice((page - 1) * 10, page * 10).map(id => (
                 <li key={id}>
@@ -30,7 +30,7 @@ function NewsList({ids}) {
             ))}
         </ul>
         <Pagination currentPageNumber={page} numberOfPages={Math.floor(getIds()?.length / 10) + 1} setCurrentPageCallBack={setPage}></Pagination>
-    </div>;
+    </>;
 }
 
 
